@@ -2,6 +2,9 @@
 .idea
 .vscode
 
+# variables
+.env
+
 # dependencies
 node_modules
 

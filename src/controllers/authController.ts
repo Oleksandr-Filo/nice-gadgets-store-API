@@ -1,9 +1,20 @@
 import { Request, Response } from 'express';
+import { User } from '../models/User';
 
-const registration = async (req: Request, res: Response) => {
-  res.send('Registered');
+const register = async (req: Request, res: Response) => {
+  const { email, password } = req.body;
+
+  const user = await User.create(
+    {
+      email,
+      password,
+    },
+    { logging: false },
+  );
+
+  res.send(user);
 };
 
 export const authController = {
-  registration,
+  register,
 };

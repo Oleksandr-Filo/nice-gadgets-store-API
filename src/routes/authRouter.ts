@@ -3,4 +3,4 @@ import { authController } from '../controllers/authController';
 
 export const authRouter = express.Router();
 
-authRouter.post('/registration', authController.registration);
+authRouter.post('/registration', express.json(), authController.register);
