@@ -1,0 +1,1 @@
+# nice-gadgets-store-API
